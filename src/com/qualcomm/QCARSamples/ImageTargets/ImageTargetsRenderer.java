@@ -233,6 +233,25 @@ public class ImageTargetsRenderer implements GLSurfaceView.Renderer {
 			 * the example the function is updateModelviewMatrix) //
 			 * http://www.jpct.net/forum2/index.php?topic=3598.0
 			 */
+			//Camera position
+//			landscape mode
+//			float cam_x = invTranspMV.data[12];
+//			float cam_y = invTranspMV.data[13];
+//			float cam_z = invTranspMV.data[14];
+//
+//			//Camera orientation axis (camera viewing direction, camera right direction and camera up direction)
+//			float cam_right_x = invTranspMV.data[0];
+//			float cam_right_y = invTranspMV.data[1];
+//			float cam_right_z = invTranspMV.data[2];
+//
+//			float cam_up_x = -invTranspMV.data[4];
+//			float cam_up_y = -invTranspMV.data[5];
+//			float cam_up_z = -invTranspMV.data[6];
+//
+//			float cam_dir_x = invTranspMV.data[8];
+//			float cam_dir_y = invTranspMV.data[9];
+//			float cam_dir_z = invTranspMV.data[10];
+			
 			float cam_right_x = modelViewMat[0];
 			float cam_right_y = modelViewMat[1];
 			float cam_right_z = modelViewMat[2];
