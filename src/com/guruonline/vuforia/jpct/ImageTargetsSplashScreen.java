@@ -11,14 +11,14 @@ All Rights Reserved.
 
 ==============================================================================*/
 
-package com.qualcomm.QCARSamples.ImageTargets;
+package com.guruonline.vuforia.jpct;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import com.qualcomm.QCARSamples.QCAR_JPCT_AE.R;
+import com.guruonline.vofuria.jpct.R;
 
 
 public class ImageTargetsSplashScreen extends Activity

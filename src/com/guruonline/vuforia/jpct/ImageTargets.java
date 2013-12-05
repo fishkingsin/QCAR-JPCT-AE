@@ -11,7 +11,7 @@ All Rights Reserved.
 ==============================================================================*/
 
 
-package com.qualcomm.QCARSamples.ImageTargets;
+package com.guruonline.vuforia.jpct;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
@@ -40,7 +40,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.qualcomm.QCAR.QCAR;
-import com.qualcomm.QCARSamples.QCAR_JPCT_AE.R;
+import com.guruonline.vofuria.jpct.R;
 
 
 /** The main activity for the ImageTargets sample. */

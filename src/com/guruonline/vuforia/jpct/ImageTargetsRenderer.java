@@ -10,7 +10,7 @@ All Rights Reserved.
 
 ==============================================================================*/
 
-package com.qualcomm.QCARSamples.ImageTargets;
+package com.guruonline.vuforia.jpct;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;

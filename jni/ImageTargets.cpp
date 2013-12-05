@@ -114,7 +114,7 @@ class ImageTargets_UpdateCallback: public QCAR::UpdateCallback {
 ImageTargets_UpdateCallback updateCallback;
 
 JNIEXPORT int JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_getOpenGlEsVersionNative(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_getOpenGlEsVersionNative(JNIEnv *, jobject)
 {
 #ifdef USE_OPENGL_ES_1_1        
 	return 1;
@@ -124,7 +124,7 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_getOpenGlEsVersionNative
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setActivityPortraitMode(JNIEnv *, jobject, jboolean isPortrait)
+Java_com_guruonline_vuforia_jpct_ImageTargets_setActivityPortraitMode(JNIEnv *, jobject, jboolean isPortrait)
 {
 	isActivityInPortraitMode = isPortrait;
 	if(isActivityInPortraitMode)
@@ -139,15 +139,15 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setActivityPortraitMode(
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_switchDatasetAsap(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_switchDatasetAsap(JNIEnv *, jobject)
 {
 	switchDataSetAsap = true;
 }
 
 JNIEXPORT int JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initTracker(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_initTracker(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initTracker");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_initTracker");
 
 // Initialize the image tracker:
 	QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
@@ -163,9 +163,9 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initTracker(JNIEnv *, jo
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitTracker(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_deinitTracker(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitTracker");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_deinitTracker");
 
 // Deinit the image tracker:
 	QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
@@ -173,9 +173,9 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitTracker(JNIEnv *, 
 }
 
 JNIEXPORT int JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_loadTrackerData(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_loadTrackerData(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_loadTrackerData");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_loadTrackerData");
 
 // Get the image tracker:
 	QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
@@ -228,9 +228,9 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_loadTrackerData(JNIEnv *
 }
 
 JNIEXPORT int JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_destroyTrackerData(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_destroyTrackerData(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_destroyTrackerData");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_destroyTrackerData");
 
 // Get the image tracker:
 	QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
@@ -287,7 +287,7 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_destroyTrackerData(JNIEn
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_onQCARInitializedNative(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_onQCARInitializedNative(JNIEnv *, jobject)
 {
 // Register the update callback where we handle the data set swap:
 	QCAR::registerCallback(&updateCallback);
@@ -298,7 +298,7 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_onQCARInitializedNative(
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_renderFrame(JNIEnv *env, jobject obj)
+Java_com_guruonline_vuforia_jpct_ImageTargetsRenderer_renderFrame(JNIEnv *env, jobject obj)
 {
 	jclass activityClass = env->GetObjectClass(obj); //We get the class of out activity
 	jmethodID updateMatrixMethod = env->GetMethodID(activityClass, "updateModelviewMatrix", "([F)V");
@@ -412,10 +412,10 @@ void configureVideoBackground() {
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initApplicationNative(
+Java_com_guruonline_vuforia_jpct_ImageTargets_initApplicationNative(
 		JNIEnv* env, jobject obj, jint width, jint height)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initApplicationNative");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_initApplicationNative");
 
 // Store screen dimensions
 	screenWidth = width;
@@ -442,7 +442,7 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initApplicationNative(
 	textures = new Texture*[textureCount];
 
 	jmethodID getTextureMethodID = env->GetMethodID(activityClass,
-			"getTexture", "(I)Lcom/qualcomm/QCARSamples/ImageTargets/Texture;");
+			"getTexture", "(I)Lcom/guruonline/vuforia/jpct/Texture;");
 
 	if (getTextureMethodID == 0)
 	{
@@ -463,14 +463,14 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initApplicationNative(
 
 		textures[i] = Texture::create(env, textureObject);
 	}
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_initApplicationNative finished");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_initApplicationNative finished");
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitApplicationNative(
+Java_com_guruonline_vuforia_jpct_ImageTargets_deinitApplicationNative(
 		JNIEnv* env, jobject obj)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitApplicationNative");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_deinitApplicationNative");
 
 // Release texture resources
 	if (textures != 0)
@@ -489,10 +489,10 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_deinitApplicationNative(
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_startCamera(JNIEnv *,
+Java_com_guruonline_vuforia_jpct_ImageTargets_startCamera(JNIEnv *,
 		jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_startCamera");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_startCamera");
 
 // Select the camera to open, set this to QCAR::CameraDevice::CAMERA_FRONT 
 // to activate the front camera instead.
@@ -531,9 +531,9 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_startCamera(JNIEnv *,
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_stopCamera(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_stopCamera(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_stopCamera");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_stopCamera");
 
 // Stop the tracker:
 	QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
@@ -546,9 +546,9 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_stopCamera(JNIEnv *, job
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setProjectionMatrix(JNIEnv *, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_setProjectionMatrix(JNIEnv *, jobject)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setProjectionMatrix");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargets_setProjectionMatrix");
 
 // Cache the projection matrix:
 	const QCAR::CameraCalibration& cameraCalibration =
@@ -560,19 +560,19 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setProjectionMatrix(JNIE
 // Activates Camera Flash
 // ----------------------------------------------------------------------------
 JNIEXPORT jboolean JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_activateFlash(JNIEnv*, jobject, jboolean flash)
+Java_com_guruonline_vuforia_jpct_ImageTargets_activateFlash(JNIEnv*, jobject, jboolean flash)
 {
 	return QCAR::CameraDevice::getInstance().setFlashTorchMode((flash==JNI_TRUE)) ? JNI_TRUE : JNI_FALSE;
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_autofocus(JNIEnv*, jobject)
+Java_com_guruonline_vuforia_jpct_ImageTargets_autofocus(JNIEnv*, jobject)
 {
 	return QCAR::CameraDevice::getInstance().setFocusMode(QCAR::CameraDevice::FOCUS_MODE_TRIGGERAUTO) ? JNI_TRUE : JNI_FALSE;
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setFocusMode(JNIEnv*, jobject, jint mode)
+Java_com_guruonline_vuforia_jpct_ImageTargets_setFocusMode(JNIEnv*, jobject, jint mode)
 {
 	int qcarFocusMode;
 
@@ -602,10 +602,10 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargets_setFocusMode(JNIEnv*, jo
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_initRendering(
+Java_com_guruonline_vuforia_jpct_ImageTargetsRenderer_initRendering(
 		JNIEnv* env, jobject obj)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_initRendering");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargetsRenderer_initRendering");
 
 // Define clear color
 	glClearColor(0.0f, 0.0f, 0.0f, QCAR::requiresAlpha() ? 0.0f : 1.0f);
@@ -642,10 +642,10 @@ Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_initRendering(
 }
 
 JNIEXPORT void JNICALL
-Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_updateRendering(
+Java_com_guruonline_vuforia_jpct_ImageTargetsRenderer_updateRendering(
 		JNIEnv* env, jobject obj, jint width, jint height)
 {
-	LOG("Java_com_qualcomm_QCARSamples_ImageTargets_ImageTargetsRenderer_updateRendering");
+	LOG("Java_com_guruonline_vuforia_jpct_ImageTargetsRenderer_updateRendering");
 
 // Update screen dimensions
 	screenWidth = width;

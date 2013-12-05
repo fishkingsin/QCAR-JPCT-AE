@@ -10,7 +10,7 @@ All Rights Reserved.
 
 ==============================================================================*/
 
-package com.qualcomm.QCARSamples.ImageTargets;
+package com.guruonline.vuforia.jpct;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import com.qualcomm.QCARSamples.QCAR_JPCT_AE.R;
+import com.guruonline.vofuria.jpct.R;
 
 public class AboutScreen extends Activity implements OnClickListener
 {

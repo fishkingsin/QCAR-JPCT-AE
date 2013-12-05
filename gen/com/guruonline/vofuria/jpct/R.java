@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.qualcomm.QCARSamples.QCAR_JPCT_AE;
+package com.guruonline.vofuria.jpct;
 
 public final class R {
     public static final class attr {

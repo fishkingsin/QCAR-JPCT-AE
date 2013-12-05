@@ -4,7 +4,7 @@ All Rights Reserved.
 
 ==============================================================================*/
 
-package com.qualcomm.QCARSamples.ImageTargets;
+package com.guruonline.vuforia.jpct;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
